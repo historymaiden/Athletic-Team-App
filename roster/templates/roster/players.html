@@ -1,0 +1,17 @@
+<!--new file: roster/templates/roster/student.html -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd"
+    >
+{% extends "base.html"%}
+
+{% block content %}
+    {% if error_message %} <b>{{ error_message }}</b> {%endif%}
+{% if error_message == NULL %}
+
+<h2>Student: {{ student.name }}</h2>
+<p>Details</p>
+<ul>
+    <li>PID: {{ student.pid }}</li>
+</ul>
+{% endif %}
+{% endblock %}

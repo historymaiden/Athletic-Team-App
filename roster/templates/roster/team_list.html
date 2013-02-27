@@ -1,0 +1,32 @@
+<!--template for list of teams-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd"
+    >
+{% extends "base.html"%}
+
+{% block content %}
+    <h2>All Teams</h1>
+        <ul>
+        {% for team_list in teams %}
+        {# Each "student" is a student model object. #}
+        <li><a href="{{ teams.name }}">{{ teams.name }}</a> </li>
+        {% endfor %}
+        </ul>
+        
+<div class="pagination">
+    <span class="step-links">
+        {% if teams.has_previous %}
+            <a href="?page={{ teams.previous_page_number }}">previous</a>
+        {% endif %}
+        
+        <span class="current">
+            Page {{ teams.number }} of {{ teams.paginator.num_pages }}.
+        </span>
+        
+        {% if teams.has_next %}
+            <a href="?page={{ teams.next_page_number }}">next</a>
+        {% endif %}
+    </span>
+</div>
+
+{% endblock %}
