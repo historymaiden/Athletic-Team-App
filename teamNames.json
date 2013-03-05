@@ -1,0 +1,236 @@
+[
+    {
+        "pk":1,
+        "model": "roster.Teams",
+        "fields": {
+            "sport": "Baseball",
+            "coach": "Bob",
+            "sportType": "mens"
+        }
+    },
+    {
+        "pk":2,
+        "model": "roster.Teams",
+        "fields": {
+            "sport": "Basketball",
+            "coach": "Bob",
+            "sportType": "mens"
+        }
+    },
+    {
+        "pk":3,
+        "model": "roster.Teams",
+        "fields": {
+            "sport": "Cross Country",
+            "coach": "Bob",
+            "sportType": "mens"
+        }
+    },
+    {
+        "pk":4,
+        "model": "roster.Teams",
+        "fields": {
+            "sport": "Fencing",
+            "coach": "Bob",
+            "sportType": "mens"
+        }
+    },
+    {
+        "pk":5,
+        "model": "roster.Teams",
+        "fields": {
+            "sport": "Football",
+            "coach": "Bob",
+            "sportType": "mens"
+        }
+    },
+    {
+        "pk":6,
+        "model": "roster.Teams",
+        "fields": {
+            "sport": "Golf",
+            "coach": "Bob",
+            "sportType": "mens"
+        }
+    },
+    {
+        "pk":7,
+        "model": "roster.Teams",
+        "fields": {
+            "sport": "Lacrosse",
+            "coach": "Bob",
+            "sportType": "mens"
+        }
+    },
+    {
+        "pk":8,
+        "model": "roster.Teams",
+        "fields": {
+            "sport": "Soccer",
+            "coach": "Bob",
+            "sportType": "mens"
+        }
+    },
+    {
+        "pk":9,
+        "model": "roster.Teams",
+        "fields": {
+            "sport": "Swimming & Diving",
+            "coach": "Bob",
+            "sportType": "mens"
+        }
+    },
+    {
+        "pk":10,
+        "model": "roster.Teams",
+        "fields": {
+            "sport": "Tennis",
+            "coach": "Robert",
+            "sportType": "mens"
+        }
+    },
+    {
+        "pk":11,
+        "model": "roster.Teams",
+        "fields": {
+            "sport": "Track & Field",
+            "coach": "Bob",
+            "sportType": "mens"
+        }
+    },
+    {
+        "pk":12,
+        "model": "roster.Teams",
+        "fields": {
+            "sport": "Wrestling",
+            "coach": "Bob",
+            "sportType": "mens"
+        }
+    },
+    {
+        "pk":13,
+        "model": "roster.Teams",
+        "fields": {
+            "sport": "Basketball",
+            "coach": "Lisa",
+            "sportType": "womens"
+        }
+    },
+    {
+        "pk":14,
+        "model": "roster.Teams",
+        "fields": {
+            "sport": "Cross Country",
+            "coach": "Lisa",
+            "sportType": "womens"
+        }
+    },
+    {
+        "pk":15,
+        "model": "roster.Teams",
+        "fields": {
+            "sport": "Fencing",
+            "coach": "Lisa",
+            "sportType": "womens"
+        }
+    },
+    {
+        "pk":16,
+        "model": "roster.Teams",
+        "fields": {
+            "sport": "Field Hockey",
+            "coach": "Lisa",
+            "sportType": "womens"
+        }
+    },
+    {
+        "pk":17,
+        "model": "roster.Teams",
+        "fields": {
+            "sport": "Golf",
+            "coach": "Lisa",
+            "sportType": "womens"
+        }
+    },
+    {
+        "pk":18,
+        "model": "roster.Teams",
+        "fields": {
+            "sport": "Gymnastics",
+            "coach": "Lisa",
+            "sportType": "womens"
+        }
+    },
+    {
+        "pk":19,
+        "model": "roster.Teams",
+        "fields": {
+            "sport": "Lacrosse",
+            "coach": "Lisa",
+            "sportType": "womens"
+        }
+    },
+    {
+        "pk":20,
+        "model": "roster.Teams",
+        "fields": {
+            "sport": "Rowing",
+            "coach": "Lisa",
+            "sportType": "womens"
+        }
+    },
+    {
+        "pk":21,
+        "model": "roster.Teams",
+        "fields": {
+            "sport": "Soccer",
+            "coach": "Lisa",
+            "sportType": "womens"
+        }
+    },
+    {
+        "pk":22,
+        "model": "roster.Teams",
+        "fields": {
+            "sport": "Softball",
+            "coach": "Lisa",
+            "sportType": "womens"
+        }
+    },
+    {
+        "pk":23,
+        "model": "roster.Teams",
+        "fields": {
+            "sport": "Swimming & Diving",
+            "coach": "Lisa",
+            "sportType": "womens"
+        }
+    },
+    {
+        "pk":24,
+        "model": "roster.Teams",
+        "fields": {
+            "sport": "Tennis",
+            "coach": "Lisa",
+            "sportType": "womens"
+        }
+    },
+    {
+        "pk":25,
+        "model": "roster.Teams",
+        "fields": {
+            "sport": "Track & Field",
+            "coach": "Lisa",
+            "sportType": "womens"
+        }
+    },
+    {
+        "pk":26,
+        "model": "roster.Teams",
+        "fields": {
+            "sport": "Volleyball",
+            "coach": "Lisa",
+            "sportType": "womens"
+        }
+    }    
+]

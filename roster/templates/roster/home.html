@@ -2,12 +2,47 @@
 <!--roster/templates/roster/home.html -->
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
     "http://www.w3.org/TR/html4/strict.dtd"-->
+          
 {% extends "base.html"%}
 {% load humanize %}
 {% load url from future %} <!--load the url the way django has coded it in the future -->
-
+   
 {% block content %}
-<h1>UNC Athletic Teams</h1>
-<p>Welcome to the UNC Athletic Teams website.</p>
-<p><a href="{% url 'roster_teams_list' %}">List of Teams</a></p>
+       
+    <!-- insert image slider here -->
+    <div class="slider">
+        <p>Slider goes here.</p>
+        
+    </div>
+    
+    <div id="content">
+        <div id="mensTeams">
+            <h2>Men's</h2>
+            
+            <div class="list">
+                <ul>
+                {% for sport in Teams %}
+                {# Each "Team" is a team model object. #}
+                <li><a href="{% url roster_teamRoster }}">{{ teamName }}</a> </li>
+                {% endfor %}
+                </ul>
+            </div>
+            
+        </div>
+        
+        <div id="womensTeams">
+            <h2>Women's</h2>
+            
+            <div class="list">
+                <ul>
+                {% for sport in Teams %}
+                {# Each "Team" is a team model object. #}
+                <li><a href="{% url roster_teamRoster %}">{{ teamName }}</a> </li>
+                {% endfor %}
+                </ul>
+            </div>
+            
+        </div>
+        
+    </div>
 {% endblock %}
