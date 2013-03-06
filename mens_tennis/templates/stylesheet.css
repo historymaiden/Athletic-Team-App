@@ -1,0 +1,66 @@
+/*formatting for nav bar and base.html*/
+ul#navBar {
+  margin:20px;
+  padding:0;
+  list-style:none;
+  width:525px;
+}
+ul#navBar li {
+  display:inline
+}
+ul#navBar li a { /*make background transparent with white text*/
+ text-decoration:none;
+ padding:5px 0;
+ width:100px;
+ background:transparent;
+ color:white;
+ float:left;
+ text-align:center;
+ border-left:1px solid black;
+}
+ul#navBar li a:hover { /*make the background transparent but the text enlarges and bolds*/
+  background:transparent;
+  color:#000;
+  font-style:oblique; /*does this bold?*/
+  font-size:x-large;
+}
+
+
+/*formatting for the profile photo/basic specs for the players.html. Need to adjust the settings still.*/
+.profile { /*includes photo and demographics*/
+    height:500px;
+    width: 700px;
+    border: 2px solid #6495ed;
+    border-radius:5px;
+    background-color: #bcd2ee;
+    margin: auto;
+    text-align: center;
+}
+.container { /*applies to all html pages*/
+    margin: auto;
+
+}
+.seasonInfo { /*for freshman, sophomore, junior info and later add stats*/
+    margin:auto;
+}
+.content {
+
+display:none;
+
+}
+
+
+/*formatting for home.html page*/
+#content { /*contains list of mens and womens sport teams*/
+        
+}
+#mensTeams { /*mens teams section on the left side*/
+    float:left;
+}
+#womensTeam { /*womens teams section on the right side*/
+    float:left;
+}
+.list li { /*format list of teams*/
+    text-decoration: none;
+    /*remove bullets and format with font-family*/
+    }
