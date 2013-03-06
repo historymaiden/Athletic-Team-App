@@ -30,12 +30,12 @@ class Player (models.Model):
     
 class Teams(models.Model): #for list of teams
     sport = models.CharField(unique=False, max_length=50) #the name of the sport
-    coach = models.CharField(unique=False, max_length=50)
+    coach = models.CharField(unique=False, max_length=50) #name of coach
     sportType = models.CharField(max_length=10) # men's or women's
-    player = models.ManyToManyField(Player)
+    players = models.ManyToManyField(Player)
     class Meta(object):
-        verbose_name_plural = "List of Teams"
-        #ordering = ('sport')
+        #verbose_name_plural = "List of Teams"
+        ordering = ('sport', 'pk')
     
     def __unicode__(self):
         return U'%s' %(self.sport)
@@ -43,23 +43,6 @@ class Teams(models.Model): #for list of teams
     def save(self, *args, **kwargs):
         self.sport = self.sport.upper()
         super(Teams, self).save(*args, **kwargs)
-        
-#class TeamRoster (models.Model): #use this once the sports team has been selected to display a list of all team members
-#   name = models.CharField(unique=True, max_length=50)
- #     sport = models.ForeignKey(Teams)
-  #  player = models.ManyToManyField(Player)
-   # teamimageurl = models.CharField(max_length=100)
-        
-#    class Meta(object):
- #       verbose_name_plural = "Team Roster"
-       # ordering = ('name', 'players')
-        
-  #  def __unicode__(self):
-   #    return U'%s | %s' %(self.players, self.sport)
-    
-  #  def save(self, *args, **kwargs):
-   #     self.name = self.name.upper()
-    #    super(TeamRoster, self).save(*args, **kwargs)
         
 
     

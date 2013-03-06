@@ -5,18 +5,26 @@
 <html lang="en">
 <head>
     <title>{% block title %}UNC Athletics{% endblock %}</title>
-    
+    <link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+    <link type="text/javascript" rel="stylesheet" href="javascript.js"/>
+    <link href="{{ STATIC_URL }}css/bootstrap.min.css" rel="stylesheet"/>
 </head>
 
 <body>
     <!--insert header with logo here -->
     <div class="header">
+        <img src="#" alt="UNC logo"/>
         <h1>UNC Athletic Teams</h1>
     </div>
     
     <!--insert horizontal menu here -->
     <div class="navigation">
-        <p>Navigation goes here.</p>
+        <ul id="navBar"> 
+          <li><a href="?section=home">Home</a></li> 
+          <li><a href="?section=overview">Overview</a></li> 
+          <li><a href="?section=products">Products</a></li> 
+          <li><a href="?section=contactus">Contact Us</a></li> 
+        </ul>    
     </div>
     
     <div class="container">

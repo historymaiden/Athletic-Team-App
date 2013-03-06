@@ -9,21 +9,20 @@
    
 {% block content %}
        
-    <!-- insert image slider here -->
-    <div class="slider">
-        <p>Slider goes here.</p>
-        
-    </div>
     
-    <div id="content">
+    <div class="container">
+        <!-- insert image slider here -->
+        <div class="slider">
+            <p>Slider goes here.</p>
+            
+        </div>
+    
         <div id="mensTeams">
             <h2>Men's</h2>
-            
             <div class="list">
                 <ul>
-                {% for sport in Teams %}
-                {# Each "Team" is a team model object. #}
-                <li><a href="{% url roster_teamRoster }}">{{ teamName }}</a> </li>
+                {% for i in mens %}
+                <li><a href="{% url 'roster_teamRoster' i.id %}">{{ i.sport }}</a> </li>
                 {% endfor %}
                 </ul>
             </div>
@@ -35,9 +34,8 @@
             
             <div class="list">
                 <ul>
-                {% for sport in Teams %}
-                {# Each "Team" is a team model object. #}
-                <li><a href="{% url roster_teamRoster %}">{{ teamName }}</a> </li>
+                {% for i in womens %}
+                <li><a href="{% url 'roster_teamRoster' i.id %}">{{ i.sport }}</a> </li>
                 {% endfor %}
                 </ul>
             </div>

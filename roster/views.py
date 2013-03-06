@@ -4,11 +4,13 @@ from roster.models import Teams, Player
 from django.shortcuts import render, get_object_or_404
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
-def home(request, pk):
+def home(request):
+    teamList = Teams.objects.all()
+    mens = Teams.objects.filter(sportType__istartswith="m")
+    womens = Teams.objects.filter(sportType__istartswith="w")
     context = {
-        'teamName': Teams.object.all()
-    #mens = Teams.objects.filter(sportType__exact="mens")
-    #womens = Teams.objects.filter(sportType__exact="womens")
+        'mens': mens,
+        'womens': womens, 
     }
     return render(request, "roster/home.html", context)
 
@@ -17,21 +19,16 @@ def home(request, pk):
  #   teamName = get_object_or_404(Teams, id=pk)
   #  return render(request, "roster/home.html", {'teamName': teamName})
 
-def teamRoster(request): #shows list of players
-    player_list = Players.objects.all()
-    paginator = Paginator(student_list, 25) #1st is what to pass in and 2nd is how many to show
-    page = request.GET.get('page')
-    #players = get_object_or_404(Player, id=pk)
-    return render(request, "roster/teamRoster.html", {'players': players})
+def teamRoster(request, pk): #shows list of players
+    tempteams = Teams.objects.get(id=pk)
+    tempteams = tempteams.players.all()
+    team = get_object_or_404(Teams, id=pk)
+    context = {
+        'teamList': tempteams,
+        'team': team,
+    }
+    return render(request, "roster/teamRoster.html", context)
 
 def players(request, pk): #shows player bio
-    #course = Course.objects.order_by('?')[0]
-    #name = request.GET['name']
-    #try:
-     #   student = Student.objects.filter(name__istartswith=name)[0]
-    #except:
-     #   return render(request, "roster/student.html", {'student': Student(), 'error_message': 'No student exists with the name ' + name})
-    #else: 
-     #   return render(request, "roster/student.html", {'student': student})
-    players = get_object_or_404(TeamMember, id=pk)
+    players = get_object_or_404(Player, id=pk)
     return render(request, "roster/players.html", {'players': players})

@@ -8,10 +8,89 @@
     {% if error_message %} <b>{{ error_message }}</b> {%endif%}
 {% if error_message == NULL %}
 
-<h2>Student: {{ student.name }}</h2>
-<p>Details</p>
-<ul>
-    <li>PID: {{ student.pid }}</li>
-</ul>
+<div class="container">
+        {% for players in players %}
+        
+    <div class="profile">
+        <!--this is where the profile photo and demographics for the player will go. See BYU sports for example-->
+        <h1>{{ player.name }}</h1>
+        <img src="{% url {{ player.image_uri }}}"/>
+        <p>Height: {{player.height }}</p>
+        <p>Weight: {{player.weight }} lbs.</p>
+        <p>Class: {{player.class_level }}</p>
+        <p>Major: {{player.major }}</p>
+        <p>Primary Hand: {{player.primary_hand }}</p>
+        <p>Birthdate: {{player.birthdate }}</p>
+        <p>Hometown: {{player.hometown }}</p>
+        <p>High school: {{player.high_school }}</p>
+        <p>Parents: {{player.parents }}</p>
+    </div>
+    
+    <div class="otherProfile">
+        <!--this is where the rest of the player profile will go-->
+        <p>Experience:</p>
+        <ul>
+            <li>{{ player.experience }}</li>
+        </ul>
+        <p>Other General Information:</p>
+        <ul>
+            <li>{{ player.general }}</li>
+            <li>{{ player.prep_highlights }}</li>
+        </ul>
+        
+    </div>
+    
+    <div class="seasonInfo">
+        <!--this is where the season info will go, with tabs for each season. Later a tab for stats will be added-->
+        <div class="tab">
+            <p>Current Season</p>
+        </div>
+            <!-- tab item used for navigating through different content -->
+            
+        <div class="content">
+            <p>{{ player.fall2012 }}</p>
+        </div>
+        <!-- content that will be switched -->
+        
+        <div class="tab">
+            <p>Freshman Season</p>
+        </div>
+        <!-- tab item used for navigating through different content -->
+        
+        <div class="content">
+            <p>{{ player.freshman_season }}</p>
+        </div>
+        <!-- content that will be switched -->
+        
+        <div class="tab">
+            <p>Sophomore Season</p>
+        </div>
+        <!-- tab item used for navigating through different content -->
+        
+        <div class="content">
+            <p>{{ player.sophomore_season }}</p>
+        </div>
+        <!-- content that will be switched -->
+        
+        <div class="tab">
+            <p>Junior Season</p>
+        </div>
+        <!-- tab item used for navigating through different content -->
+        
+        <div class="content">
+            <p>{{ player.junior_season }}</p>
+        </div>
+        <!-- content that will be switched -->
+        
+        <div id="screen">
+        </div>
+        <!-- The div that will contain the interchanging content -->
+        
+    </div>
+    
+    
+    
+</div>
+
 {% endif %}
 {% endblock %}
