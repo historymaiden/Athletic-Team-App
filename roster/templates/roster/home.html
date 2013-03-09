@@ -8,39 +8,37 @@
 {% load url from future %} <!--load the url the way django has coded it in the future -->
    
 {% block content %}
-       
-    
-    <div class="container">
+
         <!-- insert image slider here -->
         <div class="slider">
             <p>Slider goes here.</p>
             
         </div>
     
-        <div id="mensTeams">
-            <h2>Men's</h2>
-            <div class="list">
-                <ul>
-                {% for i in mens %}
-                <li><a href="{% url 'roster_teamRoster' i.id %}">{{ i.sport }}</a> </li>
-                {% endfor %}
-                </ul>
+        <div id="teamListing">
+            <div id="mensTeams">
+                <h2>Men's Athletics</h2>
+                <div class="list">
+                    <ul>
+                        {% for i in mens %}
+                            <li><a href="{% url 'roster_teamRoster' i.id %}">{{ i.sport }}</a> </li>
+                        {% endfor %}
+                    </ul>
+                </div>
             </div>
-            
-        </div>
         
-        <div id="womensTeams">
-            <h2>Women's</h2>
-            
-            <div class="list">
-                <ul>
-                {% for i in womens %}
-                <li><a href="{% url 'roster_teamRoster' i.id %}">{{ i.sport }}</a> </li>
-                {% endfor %}
-                </ul>
+            <div id="womensTeams">
+                <h2>Women's Athletics</h2>
+                
+                <div class="list">
+                    <ul>
+                        {% for i in womens %}
+                            <li><a href="{% url 'roster_teamRoster' i.id %}">{{ i.sport }}</a> </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                
             </div>
-            
         </div>
-        
     </div>
 {% endblock %}

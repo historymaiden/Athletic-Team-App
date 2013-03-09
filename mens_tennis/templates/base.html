@@ -7,30 +7,31 @@
     <title>{% block title %}UNC Athletics{% endblock %}</title>
     <link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}css/stylesheet.css"/>
     <link type="text/javascript" rel="stylesheet" href="{{ STATIC_URL }}js/javascript.js"/>
-    <link href="{{ STATIC_URL }}css/bootstrap.min.css" rel="stylesheet"/>
+    <!--<link href="{{ STATIC_URL }}css/bootstrap.min.css" rel="stylesheet"/>-->
 </head>
 
 <body>
     <!--insert header with logo here -->
     <div class="header">
-        <img src="#" alt="UNC logo"/>
+        <img id="logo" src="{{ STATIC_URL }}img/unc-logo.gif" alt="UNC logo"/>
         <h1>UNC Athletic Teams</h1>
     </div>
-    
-    <!--insert horizontal menu here -->
-    <div class="navigation">
-        <ul id="navBar"> 
-          <li><a href="?section=home">Home</a></li> 
-          <li><a href="?section=overview">Overview</a></li> 
-          <li><a href="?section=products">Products</a></li> 
-          <li><a href="?section=contactus">Contact Us</a></li> 
-        </ul>    
-    </div>
-    
     <div class="container">
-        {% block content %}{% endblock %}
-    </div>
+    <!--insert horizontal menu here -->
+        <div class="navigation">
+            <ul id="navigationBar"> 
+              <li><a href="home.html">Home</a></li> 
+              <li class="navigation-border"><a href="#">Schedules</a></li> 
+              <li class="navigation-border"><a href="#">Store</a></li> 
+              <li class="navigation-border"><a href="#">Multimedia</a></li>
+              <li class="navigation-border"><a href="#">Rams Club</a></li>
+            </ul>    
+        </div>
     
+        <div class="content">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script src="{{ STATIC_URL }}js/bootstrap.min.js"></script> <!--see settings.py-->
     
