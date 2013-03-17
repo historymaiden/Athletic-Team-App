@@ -5,14 +5,15 @@
 
 {% block content %}
     <div class="container">
-        {% for i in mens %}
-        <h2 class="teamName">{{ i.sport }} Team Roster</h2>
-        {% endfor %}
-    
-      <!-- {% for i in mens %}
-       <a href="{% url 'roster_Player' i.sport }}">{{ i.sport }}</a>
-        {% endfor %}
-        </ul>-->
+        
+        <h2>Team Roster</h2>
+       
+        
+        
+    </div>
+       <!-- {% for i in mens %}
+       <a href="{% url 'roster_Player' i.sport }}">{{ i.tempteam }}</a>
+        {% endfor %}-->
     <table>    
         <tr>
             <th>Name</th>
@@ -25,7 +26,7 @@
         </tr>
         <tr>
             {% for i in teamList %}
-            <td><a href="{% url 'roster_Player' i.id %}">{{ i.name }}</a></td>
+            <td>{{ i.name }}</td>
             <td>{{ i.height }}</a></td>
             <td>{{ i.weight }}</a></td>
             <td>{{ i.primary_hand }}</a></td>

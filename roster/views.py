@@ -1,8 +1,9 @@
 # Create your views here.
 
 from roster.models import Teams, Player
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, render_to_response, get_object_or_404
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.template import RequestContext
 
 def home(request):
     teamList = Teams.objects.all()
@@ -20,9 +21,9 @@ def home(request):
   #  return render(request, "roster/home.html", {'teamName': teamName})
 
 def teamRoster(request, pk): #shows list of players
-    tempteams = Teams.objects.get(id=pk)
-    tempteams = tempteams.players.all()
-    team = get_object_or_404(Teams, id=pk)
+    tempteams = Teams.objects.get(id=pk) #return name of team clicked on
+    tempteams = tempteams.players.all() #
+    team = get_object_or_404(Player, id=pk) #get all teams
     context = {
         'teamList': tempteams,
         'team': team,
@@ -31,10 +32,10 @@ def teamRoster(request, pk): #shows list of players
 
 def players(request, pk): #shows player bio
    # tempplayers = Player.objects.get(id=pk)
-    tempplayers = Player.objects.filter(sport__istartswith="T")
+    tempplayers = Player.objects.get(id=pk)
     players = get_object_or_404(Player, id=pk)
     context = {
-        'playerList':tempplayers,
+        'playerName':tempplayers,
         'players':players,
     }
     return render(request, "roster/players.html", context)

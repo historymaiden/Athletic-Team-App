@@ -32,7 +32,7 @@ class Teams(models.Model): #for list of teams
     sport = models.CharField(unique=False, max_length=50) #the name of the sport
     coach = models.CharField(unique=False, max_length=50) #name of coach
     sportType = models.CharField(max_length=10) # men's or women's
-    players = models.ManyToManyField(Player)
+    players = models.ManyToManyField("Player")
     class Meta(object):
         #verbose_name_plural = "List of Teams"
         ordering = ('sport', 'pk')
@@ -40,9 +40,9 @@ class Teams(models.Model): #for list of teams
     def __unicode__(self):
         return self.sport
     
-    def save(self, *args, **kwargs):
-        self.sport = self.sport.upper()
-        super(Teams, self).save(*args, **kwargs)
+   # def save(self, *args, **kwargs):
+    #    self.sport = self.sport.upper()
+     #   super(Teams, self).save(*args, **kwargs)
         
 
     
