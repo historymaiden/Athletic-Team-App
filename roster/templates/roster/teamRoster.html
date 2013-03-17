@@ -27,7 +27,7 @@
         </tr>{% for i in teamList %} 
         <tr>
            
-            <td>{{ i.name }}</a></td>
+            <td><a href="{% url 'rosterPlayer' %}">{{ i.name }}</a></td>
             <td>{{ i.height }}</a></td>
             <td>{{ i.weight }}</a></td>
             <td>{{ i.primary_hand }}</a></td>
