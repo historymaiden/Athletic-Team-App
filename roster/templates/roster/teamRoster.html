@@ -1,20 +1,21 @@
 <!-- new file: roster/templates/roster/teamRoster.html -->
 
 {% extends "base.html" %}
-
+{% load humanize %}
+{% load url from future 
 
 {% block content %}
     <div class="container">
         
-        <h2>Team Roster</h2>
-       
         
         
     </div>
-       <!-- {% for i in mens %}
-       <a href="{% url 'roster_Player' i.sport }}">{{ i.tempteam }}</a>
+       <!--{% for team in teamList %}
+           
+       <h2>{{ team.pk }}Hello</h2>
         {% endfor %}-->
     <table>    
+        
         <tr>
             <th>Name</th>
             <th>Height</th>
@@ -23,14 +24,14 @@
             <th>Class</th>
             <th>Hometown</th>
             <th>High School</th>
-        </tr>
+        </tr>{% for i in teamList %} 
         <tr>
-            {% for i in teamList %}
-            <td>{{ i.name }}</td>
+           
+            <td>{{ i.name }}</a></td>
             <td>{{ i.height }}</a></td>
             <td>{{ i.weight }}</a></td>
             <td>{{ i.primary_hand }}</a></td>
-            <td>{{ i.class }}</a></td>
+            <td>{{ i.class_level }}</a></td>
             <td>{{ i.hometown }}</a></td>
             <td>{{ i.high_school }}</a></td>
             {% endfor %}

@@ -3,27 +3,26 @@
     "http://www.w3.org/TR/html4/strict.dtd"
     >
 {% extends "base.html"%}
-
+{% load humanize %}
+{% load url from future 
 {% block content %}
-    {% if error_message %} <b>{{ error_message }}</b> {%endif%}
-{% if error_message == NULL %}
 
 <div class="container">
-        {% for players in players %}
+        <!--{% for i in tempplayers %}-->
         
     <div class="profile">
         <!--this is where the profile photo and demographics for the player will go. See BYU sports for example-->
-        <h1>{{ player.name }}</h1>
+        <h1>{{ players.name }}</h1>
         <img src="{% url {{ player.image_uri }}}"/>
-        <p>Height: {{player.height }}</p>
-        <p>Weight: {{player.weight }} lbs.</p>
-        <p>Class: {{player.class_level }}</p>
-        <p>Major: {{player.major }}</p>
-        <p>Primary Hand: {{player.primary_hand }}</p>
-        <p>Birthdate: {{player.birthdate }}</p>
-        <p>Hometown: {{player.hometown }}</p>
-        <p>High school: {{player.high_school }}</p>
-        <p>Parents: {{player.parents }}</p>
+        <p>Height: {{ player.height }}</p>
+        <p>Weight: {{ player.weight }} lbs.</p>
+        <p>Class: {{ player.class_level }}</p>
+        <p>Major: {{ player.major }}</p>
+        <p>Primary Hand: {{ player.primary_hand }}</p>
+        <p>Birthdate: {{ player.birthdate }}</p>
+        <p>Hometown: {{ player.hometown }}</p>
+        <p>High school: {{ player.high_school }}</p>
+        <p>Parents: {{ player.parents }}</p>
     </div>
     
     <div class="otherProfile">
@@ -92,5 +91,5 @@
     
 </div>
 
-{% endif %}
+
 {% endblock %}

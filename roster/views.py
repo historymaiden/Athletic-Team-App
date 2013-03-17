@@ -35,7 +35,7 @@ def players(request, pk): #shows player bio
     tempplayers = Player.objects.get(id=pk)
     players = get_object_or_404(Player, id=pk)
     context = {
-        'playerName':tempplayers,
+        'tempplayers':tempplayers,
         'players':players,
     }
     return render(request, "roster/players.html", context)

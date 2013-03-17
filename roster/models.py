@@ -40,9 +40,9 @@ class Teams(models.Model): #for list of teams
     def __unicode__(self):
         return self.sport
     
-   # def save(self, *args, **kwargs):
-    #    self.sport = self.sport.upper()
-     #   super(Teams, self).save(*args, **kwargs)
+    def save(self, *args, **kwargs):
+        self.sport = self.sport.upper()
+        super(Teams, self).save(*args, **kwargs)
         
 
     
