@@ -30,5 +30,11 @@ def teamRoster(request, pk): #shows list of players
     return render(request, "roster/teamRoster.html", context)
 
 def players(request, pk): #shows player bio
+   # tempplayers = Player.objects.get(id=pk)
+    tempplayers = Player.objects.filter(sport__istartswith="T")
     players = get_object_or_404(Player, id=pk)
-    return render(request, "roster/players.html", {'players': players})
+    context = {
+        'playerList':tempplayers,
+        'players':players,
+    }
+    return render(request, "roster/players.html", context)

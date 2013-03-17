@@ -26,7 +26,7 @@ h1 {
 }
 .container { /*applies to all html pages*/
   margin:auto; /*return to auto when done styling*/
-  background-color: #203252;/*carolina blue*/
+  background-color: #203252;/*dark blue*/
  /* border: 3px solid yellow;*/
   float:left;
   width:80%;
@@ -124,7 +124,7 @@ h2 {
   float:left;
   display:block;
   line-height:1.5em;
-  width:30%;
+  width:30%;  
   
 }
 .list li a {
@@ -136,6 +136,33 @@ h2 {
   color:#797B80;
 }
 /************End of home.html ****************/
+
+/***********Begin teamRoster.html*************/
+table th td{
+  border: 2px solid #203252; /*darker blue*/
+}
+table {
+  border-collapse:collapse;
+  width:100%;
+}
+th {
+  font-weight:bold;
+  height: 25px;
+}
+td {
+  text-align:right;
+  height: 25px;
+  vertical-align: middle;
+  padding: 5px 15px 5px;
+}
+tr.alt td { /*how do I add the alt class to alternate colors when I'm not hard coding the rows?*/
+  color:#000000;
+  background-color:#5C8CBB;
+}
+
+/************End teamRoster.html*************/
+
+/***********Begin players.html***************/
 
 /*formatting for the profile photo/basic specs for the players.html. Need to adjust the settings still.*/
 .profile { /*includes photo and demographics*/
@@ -151,3 +178,17 @@ h2 {
 .seasonInfo { /*for freshman, sophomore, junior info and later add stats*/
     margin:auto;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

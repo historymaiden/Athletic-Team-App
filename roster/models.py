@@ -26,7 +26,7 @@ class Player (models.Model):
         ordering = ('name', 'pk')
     
     def __unicode__(self):
-        return U'%s | %s | %s' %(self.name, self.height, self.weight)
+        return self.name
     
 class Teams(models.Model): #for list of teams
     sport = models.CharField(unique=False, max_length=50) #the name of the sport
@@ -38,7 +38,7 @@ class Teams(models.Model): #for list of teams
         ordering = ('sport', 'pk')
     
     def __unicode__(self):
-        return U'%s' %(self.sport)
+        return self.sport
     
     def save(self, *args, **kwargs):
         self.sport = self.sport.upper()

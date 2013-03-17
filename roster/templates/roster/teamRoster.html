@@ -2,19 +2,18 @@
 
 {% extends "base.html" %}
 
+
 {% block content %}
     <div class="container">
-        <ul class="teamName">
-            <li>{{ team.sport }} Team Roster</li>
-        
-        
-        
-        
-        {% for i in teamList %}
-        <a href="{% url 'roster_players' i.id }}">{{ i.name }}</a>
+        {% for i in mens %}
+        <h2 class="teamName">{{ i.sport }} Team Roster</h2>
         {% endfor %}
-        </ul>
-        
+    
+      <!-- {% for i in mens %}
+       <a href="{% url 'roster_Player' i.sport }}">{{ i.sport }}</a>
+        {% endfor %}
+        </ul>-->
+    <table>    
         <tr>
             <th>Name</th>
             <th>Height</th>
@@ -23,6 +22,17 @@
             <th>Class</th>
             <th>Hometown</th>
             <th>High School</th>
+        </tr>
+        <tr>
+            {% for i in teamList %}
+            <td><a href="{% url 'roster_Player' i.id %}">{{ i.name }}</a></td>
+            <td>{{ i.height }}</a></td>
+            <td>{{ i.weight }}</a></td>
+            <td>{{ i.primary_hand }}</a></td>
+            <td>{{ i.class }}</a></td>
+            <td>{{ i.hometown }}</a></td>
+            <td>{{ i.high_school }}</a></td>
+            {% endfor %}
         </tr>
         
 {% endblock %}
