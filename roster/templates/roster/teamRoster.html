@@ -2,18 +2,12 @@
 
 {% extends "base.html" %}
 {% load humanize %}
-{% load url from future 
-
+{% load url from future %}
 {% block content %}
     <div class="container">
-        
-        
-        
-    </div>
-       <!--{% for team in teamList %}
-           
-       <h2>{{ team.pk }}Hello</h2>
-        {% endfor %}-->
+        </div>
+            <h2>Team Roster</h2>
+        </div>
     <table>    
         
         <tr>
@@ -26,16 +20,14 @@
             <th>High School</th>
         </tr>{% for i in teamList %} 
         <tr>
-           
-            <td><a href="{% url 'rosterPlayer' %}">{{ i.name }}</a></td>
+            <td><a href="{% url 'roster_Player' i.id %}">{{ i.name }}</a></td>
             <td>{{ i.height }}</a></td>
             <td>{{ i.weight }}</a></td>
             <td>{{ i.primary_hand }}</a></td>
             <td>{{ i.class_level }}</a></td>
             <td>{{ i.hometown }}</a></td>
             <td>{{ i.high_school }}</a></td>
-            {% endfor %}
         </tr>
-        
+        {% endfor %}
 {% endblock %}
 </div>
