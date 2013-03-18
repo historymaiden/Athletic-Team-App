@@ -8,30 +8,35 @@
 {% block content %}
 
 <div class="container">
-        <!--{% for i in tempplayers %}-->
+       
         
     <div class="profile">
         <!--this is where the profile photo and demographics for the player will go. See BYU sports for example-->
-        <h1>{{ players.name }}</h1>
-        <img src="{% url {{ player.image_uri }}}"/>
-        <p>Height: {{ players.height }}</p>
-        <p>Weight: {{ players.weight }} lbs.</p>
-        <p>Class: {{ players.class_level }}</p>
-        <p>Major: {{ players.major }}</p>
-        <p>Primary Hand: {{ players.primary_hand }}</p>
-        <p>Birthdate: {{ players.birthdate }}</p>
-        <p>Hometown: {{ players.hometown }}</p>
-        <p>High school: {{ players.high_school }}</p>
-        <p>Parents: {{ players.parents }}</p>
+        <h2 id="profileName">{{ players.name }}</h2>
+        <img src="{% url {{ player.image_uri }}}" id="headshot"/>
+        <ul class="profileDemographicsLeft">
+            <li>Height: {{ players.height }}"</li>
+            <li>Weight: {{ players.weight }} lbs.</li>
+            <li>Class: {{ players.class_level }}</li>
+            <li>Major: {{ players.major }}</li>
+            <li>Primary Hand: {{ players.primary_hand }}</li>
+        </ul>
+        
+        <ul class="profileDemographicsRight">
+            <li>Birthdate: {{ players.birthdate }}</li>
+            <li>Hometown: {{ players.hometown }}</li>
+            <li>High school: {{ players.high_school }}</li>
+            <li>Parents: {{ players.parents }}</li>
+        </ul>
     </div>
     
     <div class="otherProfile">
         <!--this is where the rest of the player profile will go-->
-        <p>Experience:</p>
+        <h3>Experience:</h3>
         <ul>
             <li>{{ players.experience }}</li>
         </ul>
-        <p>Other General Information:</p>
+        <h3>Other General Information:</h3>
         <ul>
             <li>{{ players.general }}</li>
             <li>{{ players.prep_highlights }}</li>
@@ -42,7 +47,7 @@
     <div class="seasonInfo">
         <!--this is where the season info will go, with tabs for each season. Later a tab for stats will be added-->
         <div class="tab">
-            <p>Current Season</p>
+            <h3 class="tabHeading">Current Season</h3>
         </div>
             <!-- tab item used for navigating through different content -->
             
@@ -52,7 +57,7 @@
         <!-- content that will be switched -->
         
         <div class="tab">
-            <p>Freshman Season</p>
+            <h3 class="tabHeading">Freshman Season</h3>
         </div>
         <!-- tab item used for navigating through different content -->
         
@@ -62,7 +67,7 @@
         <!-- content that will be switched -->
         
         <div class="tab">
-            <p>Sophomore Season</p>
+            <h3 class="tabHeading">Sophomore Season</h3>
         </div>
         <!-- tab item used for navigating through different content -->
         
@@ -72,7 +77,7 @@
         <!-- content that will be switched -->
         
         <div class="tab">
-            <p>Junior Season</p>
+            <h3 class="tabHeading">Junior Season</h3>
         </div>
         <!-- tab item used for navigating through different content -->
         

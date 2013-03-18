@@ -1,9 +1,14 @@
 /*formatting for nav bar and base.html*/
 body {
   background-color: #D9D9D9;
+  font-family:Ariel, sans-serif;
 }
 
 /************* CSS for base.html ******************/
+.centered {
+  margin: 0 auto;
+  width: 1000px;
+}
 .header {
   float:left;
   clear:right;
@@ -12,24 +17,25 @@ body {
   width:80%;
 }
 h1 {
-  font-size: 4em;
+  font-size: 5em;
  /* border: 1px solid green;*/
   float: left;
-  text-align:center;
+  text-align:left;
+  margin-left: 20px;
 }
 #logo {
   width: 20%;
   height: 10%;
   float:left;
-  margin: 15px;
+  margin: 15px 15px 15px 50px;
  /* border:1px solid orange;*/
 }
 .container { /*applies to all html pages*/
-  margin:auto; /*return to auto when done styling*/
+  margin:auto; 
   background-color: #203252;/*dark blue*/
- /* border: 3px solid yellow;*/
+ /* border: 3px solid orange;*/
   float:left;
-  width:80%;
+  width:auto;
   height: auto;
   border-radius:20px;
 }
@@ -49,7 +55,7 @@ h1 {
 #navigationBar li {
   display:inline;
   text-align:center;
-  padding: 10px 60px;
+  padding: 10px 50px;
   margin:auto;
   /*border:2px solid white;*/
 }
@@ -67,8 +73,9 @@ h1 {
 }
 .content {
   border-top: 3px solid white;
-  border-radius: 10px;
   margin: 5px 20px;
+  width: auto;
+  
 }
 /************ End base.html ***************/
 
@@ -103,6 +110,7 @@ h2 {
   font-size:2em;
   padding: 2px;
   width:80%;
+  color:black;
 }
 #womensTeams {
   float:right;
@@ -138,23 +146,51 @@ h2 {
 /************End of home.html ****************/
 
 /***********Begin teamRoster.html*************/
+h2#rosterTitle {
+  color:white;
+}
+.tableContainer {
+  border-radius: 15px;
+  background-color:white;
+  box-shadow: 5px 5px 5px #888888;
+  margin: 20px 10px;
+  border:3px solid #D9D9D9;
+  padding: 5px;
+  height:auto;
+  
+}
 table th td{
-  border: 2px solid #203252; /*darker blue*/
+  border: 2px solid white; /*darker blue*/
+  font-size: 0.7em;
 }
 table {
   border-collapse:collapse;
-  width:100%;
+  width:95%;
+  margin:auto;
+  background-color:white;
+  border: hidden;
 }
 th {
   font-weight:bold;
   height: 25px;
+  text-align:left;
+  color:black;
+  padding:5px;
+  
 }
 td {
-  text-align:right;
+  text-align:left;
   height: 25px;
   vertical-align: middle;
-  padding: 5px 15px 5px;
+  padding: 5px 5px 5px;
+  background-color: white;
+  border-bottom:1px groove #426180;
 }
+tr td a {
+  color: #426180;
+  text-decoration: none;
+}
+
 tr.alt td { /*how do I add the alt class to alternate colors when I'm not hard coding the rows?*/
   color:#000000;
   background-color:#5C8CBB;
@@ -166,17 +202,60 @@ tr.alt td { /*how do I add the alt class to alternate colors when I'm not hard c
 
 /*formatting for the profile photo/basic specs for the players.html. Need to adjust the settings still.*/
 .profile { /*includes photo and demographics*/
-    height:500px;
-    width: 700px;
+    height:400px;
+    width: auto;
     border: 2px solid #6495ed;
     border-radius:5px;
     background-color: #bcd2ee;
-    margin: auto;
-    text-align: center;
+    margin: 15px 5px;
+    text-align: left;
 }
-
+h2#profileName {
+  border: 1px solid red;
+  margin: 5px;
+}
+#headshot {
+  width: 250px;
+  height: 300px;
+  border:none;
+  margin:0;
+  float: left;
+}
+.profileDemographicsLeft {
+  float:left;
+  display:block;
+  list-style-type: none;
+  margin-left:15px;
+  border:1px solid black;
+  padding:0;
+  font-size: 1.3em;
+  text-align:left;
+}
+.profileDemographicsRight {
+  float:left;
+  display:block;
+  list-style-type: none;
+  margin-left:25px;
+  text-align: left;
+  font-size:1.3em;
+  border: 1px solid black;
+  padding: 0;
+}
+.otherProfile {
+  color:white;
+  width:auto;
+  padding: 2px 6px 2px 2px;
+  margin-left: 15px;
+}
 .seasonInfo { /*for freshman, sophomore, junior info and later add stats*/
     margin:auto;
+    background-color:white;
+    border: 1px solid grey;
+    padding: 2px 6px 2px 2px;
+}
+.tabHeading {
+  font-size: 0.9em;
+  padding: 0;
 }
 
 

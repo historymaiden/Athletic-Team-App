@@ -6,28 +6,32 @@
 {% block content %}
     <div class="container">
         </div>
-            <h2>Team Roster</h2>
+            <h2 id="rosterTitle">Team Roster</h2>
         </div>
-    <table>    
         
-        <tr>
-            <th>Name</th>
-            <th>Height</th>
-            <th>Weight</th>
-            <th>Primary Hand</th>
-            <th>Class</th>
-            <th>Hometown</th>
-            <th>High School</th>
-        </tr>{% for i in teamList %} 
-        <tr>
-            <td><a href="{% url 'roster_Player' i.id %}">{{ i.name }}</a></td>
-            <td>{{ i.height }}</a></td>
-            <td>{{ i.weight }}</a></td>
-            <td>{{ i.primary_hand }}</a></td>
-            <td>{{ i.class_level }}</a></td>
-            <td>{{ i.hometown }}</a></td>
-            <td>{{ i.high_school }}</a></td>
-        </tr>
-        {% endfor %}
+        <div class="tableContainer">
+            <table>    
+                <tr class="tableHeader">
+                    <th>Name</th>
+                    <th>Height (in.)</th>
+                    <th>Weight (lbs.)</th>
+                    <th>Primary Hand</th>
+                    <th>Class</th>
+                    <th>Hometown</th>
+                    <th>High School</th>
+                </tr>
+                {% for i in teamList %} 
+                <tr>
+                    <td><a href="{% url 'roster_Player' i.id %}" class="playerNameLink">{{ i.name }}</a></td>
+                    <td>{{ i.height }}</a></td>
+                    <td>{{ i.weight }}</a></td>
+                    <td>{{ i.primary_hand }}</a></td>
+                    <td>{{ i.class_level }}</a></td>
+                    <td>{{ i.hometown }}</a></td>
+                    <td>{{ i.high_school }}</a></td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
 {% endblock %}
 </div>
