@@ -8,10 +8,22 @@
     <link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}css/stylesheet.css"/>
     <link type="text/javascript" rel="stylesheet" href="{{ STATIC_URL }}js/javascript.js"/>
     <!--<link href="{{ STATIC_URL }}css/bootstrap.min.css" rel="stylesheet"/>-->
-	<!-- Start WOWSlider.com HEAD section -->
-	<link rel="stylesheet" type="text/css" href="engine1/style.css" />
-	<script type="text/javascript" src="engine1/jquery.js"></script>
-	<!-- End WOWSlider.com HEAD section -->
+    <!-- Start WOWSlider.com HEAD section -->
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}engine1/style.css" />
+    <script type="text/javascript" src="{{ STATIC_URL }}engine1/jquery.js"></script>
+    <!-- End WOWSlider.com HEAD section -->
+   
+    <!-- Begin tabs HEAD section -->
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+    <script>
+	$(function() {
+            $( "#tabs" ).tabs();
+            $( ".selector" ).tabs({ active: 1 });
+	});
+    </script>
+  <!-- End tabs HEAD section -->
 </head>
 
 <body>

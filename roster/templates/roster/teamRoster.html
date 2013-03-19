@@ -21,7 +21,7 @@
                     <th>High School</th>
                 </tr>
                 {% for i in teamList %} 
-                <tr>
+                <tr class="roster">
                     <td><a href="{% url 'roster_Player' i.id %}" class="playerNameLink">{{ i.name }}</a></td>
                     <td>{{ i.height }}</a></td>
                     <td>{{ i.weight }}</a></td>

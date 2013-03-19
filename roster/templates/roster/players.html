@@ -46,50 +46,29 @@
     
     <div class="seasonInfo">
         <!--this is where the season info will go, with tabs for each season. Later a tab for stats will be added-->
-        <div class="tab">
-            <h3 class="tabHeading">Current Season</h3>
-        </div>
-            <!-- tab item used for navigating through different content -->
+        <ul>
+            <li class="tabHeading"><a href="#tabs-1">Current Season</a></li>
+            <li class="tabHeading"><a href="#tabs-2">Freshman Season</a></li>
+            <li class="tabHeading"><a href="#tabs-3">Sophomore Season</a></li>
+            <li class="tabHeading"><a href="#tabs-4">Junior Season</a></li>
+        </ul>
+        
+            <div id="tabs-1 tabsContent">
+                <p>{{ players.fall2012 }}</p>
+            </div>
             
-        <div class="content">
-            <p>{{ players.fall2012 }}</p>
-        </div>
-        <!-- content that will be switched -->
-        
-        <div class="tab">
-            <h3 class="tabHeading">Freshman Season</h3>
-        </div>
-        <!-- tab item used for navigating through different content -->
-        
-        <div class="content">
-            <p>{{ players.freshman_season }}</p>
-        </div>
-        <!-- content that will be switched -->
-        
-        <div class="tab">
-            <h3 class="tabHeading">Sophomore Season</h3>
-        </div>
-        <!-- tab item used for navigating through different content -->
-        
-        <div class="content">
-            <p>{{ players.sophomore_season }}</p>
-        </div>
-        <!-- content that will be switched -->
-        
-        <div class="tab">
-            <h3 class="tabHeading">Junior Season</h3>
-        </div>
-        <!-- tab item used for navigating through different content -->
-        
-        <div class="content">
-            <p>{{ players.junior_season }}</p>
-        </div>
-        <!-- content that will be switched -->
-        
-        <div id="screen">
-        </div>
-        <!-- The div that will contain the interchanging content -->
-        
+            <div id="tabs-2">
+                <p>{{ players.freshman_season }}</p>
+            </div>
+            
+            <div id="tabs-3">
+                <p>{{ players.sophomore_season }}</p>
+            </div>
+            
+            <div id="tabs-4">
+                <p>{{ players.junior_season }}</p>
+            </div>
+       
     </div>
 </div>
 {% endblock %}
