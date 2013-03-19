@@ -8,67 +8,58 @@
 {% block content %}
 
 <div class="container">
-       
-        
+    <div class="divBorder">   
     <div class="profile">
         <!--this is where the profile photo and demographics for the player will go. See BYU sports for example-->
-        <h2 id="profileName">{{ players.name }}</h2>
-        <img src="{% url {{ player.image_uri }}}" id="headshot"/>
-        <ul class="profileDemographicsLeft">
-            <li>Height: {{ players.height }}"</li>
-            <li>Weight: {{ players.weight }} lbs.</li>
-            <li>Class: {{ players.class_level }}</li>
-            <li>Major: {{ players.major }}</li>
-            <li>Primary Hand: {{ players.primary_hand }}</li>
-        </ul>
         
-        <ul class="profileDemographicsRight">
-            <li>Birthdate: {{ players.birthdate }}</li>
-            <li>Hometown: {{ players.hometown }}</li>
-            <li>High school: {{ players.high_school }}</li>
-            <li>Parents: {{ players.parents }}</li>
-        </ul>
+        <h2 id="playerName">{{ players.name }}</h2>
+       
+        <div class="profileDemographics">
+        <img src="{% url {{ image.image_uri }}}" id="headshot"/>
+        <table id="profileTable">
+            <tr>  <td class="profileDemographicsLeft">Height: </td>  <td class="profileDemographicsRight">  {{ players.height }}"</td> </tr>
+            <tr>  <td class="profileDemographicsLeft">Weight: </td>  <td class="profileDemographicsRight">  {{ players.weight }} lbs.</td> </tr>
+            <tr>  <td class="profileDemographicsLeft">Class: </td>  <td class="profileDemographicsRight">  {{ players.class_level }}</td> </tr>
+            <tr>  <td class="profileDemographicsLeft">Major: </td>  <td class="profileDemographicsRight">  {{ players.major }}</td> </tr>
+            <tr>  <td class="profileDemographicsLeft">Primary Hand: </td>  <td class="profileDemographicsRight">  {{ players.primary_hand }}</td> </tr>
+            <tr>  <td class="profileDemographicsLeft">Prior Experience: </td>  <td class="profileDemographicsRight">{{ players.experience }}</td> </tr>
+            <tr>  <td class="profileDemographicsLeft">Birthdate: </td>  <td class="profileDemographicsRight">{{ players.birthdate }}</td> </tr>
+            <tr>  <td class="profileDemographicsLeft">Hometown: </td>  <td class="profileDemographicsRight">{{ players.hometown }}</td> </tr>
+            <tr>  <td class="profileDemographicsLeft">High School: </td>  <td class="profileDemographicsRight">{{ players.high_school }}</td> </tr>
+            <tr>  <td class="profileDemographicsLeft">Parents: </td>  <td class="profileDemographicsRight">{{ players.parents }}</td> </tr>
+        </table>
+        </div>
+    </div>
     </div>
     
     <div class="otherProfile">
         <!--this is where the rest of the player profile will go-->
-        <h3>Experience:</h3>
-        <ul>
-            <li>{{ players.experience }}</li>
-        </ul>
-        <h3>Other General Information:</h3>
+       <h3>Other General Information:</h3>
         <ul>
             <li>{{ players.general }}</li>
             <li>{{ players.prep_highlights }}</li>
         </ul>
         
     </div>
-    
+    <div class="divBorder">
     <div class="seasonInfo">
         <!--this is where the season info will go, with tabs for each season. Later a tab for stats will be added-->
-        <ul>
-            <li class="tabHeading"><a href="#tabs-1">Current Season</a></li>
-            <li class="tabHeading"><a href="#tabs-2">Freshman Season</a></li>
-            <li class="tabHeading"><a href="#tabs-3">Sophomore Season</a></li>
-            <li class="tabHeading"><a href="#tabs-4">Junior Season</a></li>
-        </ul>
+        <h2 class="profileHeaders">Season History</h2>
         
-            <div id="tabs-1 tabsContent">
-                <p>{{ players.fall2012 }}</p>
-            </div>
+        <div class="seasonDemographics">
+            <h4>Current Season</h4>
+            <p>{{ players.fall2012 }}</p>
             
-            <div id="tabs-2">
-                <p>{{ players.freshman_season }}</p>
-            </div>
+            <h4>Freshman Season</h4>    
+            <p>{{ players.freshman_season }}</p>
             
-            <div id="tabs-3">
-                <p>{{ players.sophomore_season }}</p>
-            </div>
+            <h4>Sophomore Season</h4>
+            <p>{{ players.sophomore_season }}</p>
             
-            <div id="tabs-4">
-                <p>{{ players.junior_season }}</p>
-            </div>
+            <h4>Junior Season</h4>
+            <p>{{ players.junior_season }}</p>
+        </div> 
        
-    </div>
+    </div></div>
 </div>
 {% endblock %}

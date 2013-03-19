@@ -20,7 +20,7 @@ class Player (models.Model):
     freshman_season = models.CharField(max_length=500)
     fall2012 = models.CharField(max_length=1000)
     prep_highlights = models.CharField(max_length=1000)
-    image_uri = models.CharField(max_length=100)
+    image_uri = models.CharField(max_length=300)
     
     class Meta(object):
         ordering = ('name', 'pk')

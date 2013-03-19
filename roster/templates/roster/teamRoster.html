@@ -6,11 +6,13 @@
 {% block content %}
     <div class="container">
         </div>
-            <h2 id="rosterTitle">Team Roster</h2>
+            <h2 id="rosterTitle">{{ gender.sportType }} {{ teamname.sport }} Team Roster</h2>
+            <p id="coach">Coach: {{ coaches.coach }}</p>
+            <img id="teamPhoto" scr="{{ STATIC_URL }}img/Tennis_team.png" alt="tennis team"/>
         </div>
         
         <div class="tableContainer">
-            <table>    
+            <table id="teamRosterTable">    
                 <tr class="tableHeader">
                     <th>Name</th>
                     <th>Height (in.)</th>

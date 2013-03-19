@@ -13,20 +13,10 @@
     <script type="text/javascript" src="{{ STATIC_URL }}engine1/jquery.js"></script>
     <!-- End WOWSlider.com HEAD section -->
    
-    <!-- Begin tabs HEAD section -->
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
-    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-    <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
-    <script>
-	$(function() {
-            $( "#tabs" ).tabs();
-            $( ".selector" ).tabs({ active: 1 });
-	});
-    </script>
-  <!-- End tabs HEAD section -->
 </head>
 
 <body>
+    
     <div class="centered">
     <!--insert header with logo here -->
     <div class="header">
@@ -46,7 +36,8 @@
         </div>
     
         <div class="content">
-            {% block content %}{% endblock %}
+            {% block content %}
+            {% endblock %}
         </div>
     </div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>

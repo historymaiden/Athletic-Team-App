@@ -3,6 +3,9 @@ body {
   background-color: #D9D9D9;
   font-family:Ariel, sans-serif;
 }
+p {
+  color: black;
+}
 
 /************* CSS for base.html ******************/
 .centered {
@@ -150,6 +153,12 @@ h2 {
 h2#rosterTitle {
   color:white;
 }
+#teamPhoto {
+  width: 640px;
+  height: 360px;
+  margin: auto;
+  border: 1px solid black;
+}
 .tableContainer {
   border-radius: 15px;
   background-color: white;
@@ -167,7 +176,7 @@ table th td{
  /* border: 2px solid white; /*darker blue*/
   font-size: 0.7em;
 }
-table {
+.teamRosterTable {
   border-collapse:collapse;
   width:95%;
   margin:auto;
@@ -182,7 +191,7 @@ th {
   padding:5px;
   
 }
-td {
+.roster td {
   text-align:left;
   height: 25px;
   vertical-align: middle;
@@ -194,10 +203,9 @@ tr td a {
   color: #426180;
   text-decoration: none;
 }
-
-tr.alt td { /*how do I add the alt class to alternate colors when I'm not hard coding the rows?*/
-  color:#000000;
-  background-color:#5C8CBB;
+#coach {
+  color: white;
+  margin: 15px;
 }
 
 /************End teamRoster.html*************/
@@ -208,44 +216,85 @@ tr.alt td { /*how do I add the alt class to alternate colors when I'm not hard c
 .profile { /*includes photo and demographics*/
     height:400px;
     width: auto;
-    border: 2px solid #6495ed;
-    border-radius:5px;
-    background-color: #bcd2ee;
-    margin: 15px 5px;
-    text-align: left;
+    border: 3px solid #D9D9D9;
+    border-radius:25px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    background-color: #D9D9D9;
+    margin: 0;   
 }
-h2#profileName {
-  border: 1px solid red;
-  margin: 5px;
+.divBorder {
+  border:2px solid black;
+  height:autuo;
+  width: auto;
+  margin-top: 15px;
+  border-radius:25px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+#playerName {
+  margin:0;
+  width: auto;
+  background-color: #D9D9D9;
+  border-color: #D9D9D9;
+}
+
+.profileDemographics {
+  width: auto;
+  height: 355px;
+  border: 2px groove #bcd2ee;
+  border-radius: 25px;
+  margin: 0;
+  padding: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  background-color: #bcd2ee; 
+}
+.seasonDemographics{
+  width: auto;
+  height: auto;
+  border: 2px groove #bcd2ee;
+  border-radius: 25px;
+  margin: 0;
+  padding: 0 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  background-color: #bcd2ee; 
 }
 #headshot {
   width: 250px;
-  height: 300px;
-  border:none;
+  height: 355px;
+  border:1px solid black;
   margin:0;
   float: left;
+  border-bottom-left-radius: 25px;
 }
-.profileDemographicsLeft {
-  float:left;
-  display:block;
-  list-style-type: none;
-  margin-left:15px;
-  margin-top:0;
-  border:1px solid black;
-  padding:0;
-  font-size: 1.3em;
-  text-align:left;
+#profileTable {
+  width: 500px;
+  /*border: 1px solid red;*/
+  padding: 35px;
+  padding-top: 15px;
+}
+#profileTable tr td{
+  font-size: 1.2em;
+  background-color: transparent;
+  vertical-align: middle;
+  border:1 px solid green;
+}
+.profileDemographicsLeft td {
+  border-right:1px solid black;
+  text-align:right;
   line-height: 25px;
+  width: 60px;
+  padding:0;
 }
-.profileDemographicsRight {
-  float:left;
-  display:block;
-  list-style-type: none;
-  margin-left:25px;
+.profileDemographicsRight td{
   text-align: left;
-  font-size:1.3em;
   border: 1px solid black;
-  padding: 0;
+  padding:0;
+  margin-left: 15px;
+  width: 50px;
 }
 .otherProfile {
   color:white;
@@ -254,23 +303,16 @@ h2#profileName {
   margin-left: 15px;
 }
 .seasonInfo { /*for freshman, sophomore, junior info and later add stats*/
-    margin:auto;
-    background-color:white;
-    border: 1px solid yellow;
+    border: 3px solid #D9D9D9;
+    border-radius:25px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    background-color: #D9D9D9;
     padding: 2px 6px 2px 2px;
-    height:400px;
-    width: auto;
+    height:auto;
+    width: auto;    
 }
-.tabHeading {
-  font-size: 0.9em;
-  padding: 5px;
-  display:inline;
-  margin: 10px;
-  border: 1px solid purple;
-}
-#tabsContent {
-  border: 1px solid red;
-}
+
 
 
 
