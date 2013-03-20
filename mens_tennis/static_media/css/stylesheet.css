@@ -6,7 +6,21 @@ body {
 p {
   color: black;
 }
-
+#social-icons {
+  display: inline;
+  float: right;
+  /*border: 1px solid black;*/
+ margin-right:15px;
+ 
+}
+#encompassSM {
+  /*border: 1px solid red;*/
+  height: auto;
+  float: left;
+  width: 1000px;
+  padding: 0;
+  clear: right;
+}
 /************* CSS for base.html ******************/
 .centered {
   margin: 0 auto;
@@ -156,7 +170,7 @@ h2#rosterTitle {
 #teamPhoto {
   width: 640px;
   height: 360px;
-  margin: auto;
+  margin: 0 150px;
   border: 1px solid black;
 }
 .tableContainer {
@@ -225,7 +239,7 @@ tr td a {
 }
 .divBorder {
   border:2px solid black;
-  height:autuo;
+  height:autu;
   width: auto;
   margin-top: 15px;
   border-radius:25px;
@@ -265,7 +279,7 @@ tr td a {
 #headshot {
   width: 250px;
   height: 355px;
-  border:1px solid black;
+  /*border:1px solid black;*/
   margin:0;
   float: left;
   border-bottom-left-radius: 25px;

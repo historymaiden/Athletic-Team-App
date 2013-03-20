@@ -15,7 +15,7 @@
         <h2 id="playerName">{{ players.name }}</h2>
        
         <div class="profileDemographics">
-        <img src="{% url {{ image.image_uri }}}" id="headshot"/>
+        <img src="{{ STATIC_URL }}img/Brett_Clark.jpg" id="headshot"/>
         <table id="profileTable">
             <tr>  <td class="profileDemographicsLeft">Height: </td>  <td class="profileDemographicsRight">  {{ players.height }}"</td> </tr>
             <tr>  <td class="profileDemographicsLeft">Weight: </td>  <td class="profileDemographicsRight">  {{ players.weight }} lbs.</td> </tr>
