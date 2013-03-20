@@ -21,6 +21,13 @@ p {
   padding: 0;
   clear: right;
 }
+.back {
+  color: white;
+  text-decoration: none;  
+}
+.back a:hover {
+  color: grey;
+}
 /************* CSS for base.html ******************/
 .centered {
   margin: 0 auto;
@@ -164,8 +171,12 @@ h2 {
 /************End of home.html ****************/
 
 /***********Begin teamRoster.html*************/
-h2#rosterTitle {
+#rosterTitle h2 {
   color:white;
+  text-align:left;
+  margin: 25px 0 0 0;
+  padding: 0;
+  width: auto;
 }
 #teamPhoto {
   width: 640px;
@@ -179,7 +190,7 @@ h2#rosterTitle {
   box-shadow: 5px 5px 5px #888888;
   margin: 20px 20px;
   border:3px solid #D9D9D9;
-  padding: 0;
+  padding: 5px;
   height:auto;
   width: auto;
 }
