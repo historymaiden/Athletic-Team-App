@@ -311,7 +311,7 @@ tr td a {
   border-right:1px solid black;
   text-align:right;
   line-height: 25px;
-  width: 60px;
+  width: 200px;
   padding:0;
 }
 .profileDemographicsRight td{
@@ -319,7 +319,7 @@ tr td a {
   border: 1px solid black;
   padding:0;
   margin-left: 15px;
-  width: 50px;
+  width: 300px;
 }
 .otherProfile {
   color:white;
