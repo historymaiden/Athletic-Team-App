@@ -17,7 +17,7 @@ class Player (models.Model):
     general = models.CharField(max_length=1000)
     junior_season = models.CharField(max_length=1000)
     sophomore_season = models.CharField(max_length=1000)
-    freshman_season = models.CharField(max_length=1000)
+    freshman_season = models.CharField(max_length=2000)
     fall2012 = models.CharField(max_length=1000)
     prep_highlights = models.CharField(max_length=1000)
     image_uri = models.CharField(max_length=300)
