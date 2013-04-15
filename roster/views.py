@@ -29,7 +29,7 @@ def teamRoster(request, pk): #shows list of players
     gender = get_object_or_404(Teams, id=pk)
     context = {
         'teamList': tempteams,
-        'team': team,
+        'team': team,   
         'teamname': teamName,
         'gender': gender,
         'coaches':coach,
